@@ -33,21 +33,25 @@ public class LineOfSight : MonoBehaviour
     {
         _playerMovement.isAttacking = true;
         target.GetComponent<EnemyMovement>().isBeingAttacked = true;
+        Destroy(target.gameObject,2.1f);
         yield return new WaitForSeconds(2);
         _playerMovement.isAttacking = false;
     }
     public bool IsInSight(Transform target)
     {
-        float distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (distanceToTarget > range) return false;
-        float angleToTarget = Vector3.Angle(transform.forward, (target.position - transform.position));
-        if (angleToTarget > angle/2) return false;
-        Vector3 direction = target.position - transform.position;
-        if (Physics.Raycast(transform.position, direction, distanceToTarget, enemyLayer)) return true;
+        if (target != null)
+        {
+            float distanceToTarget = Vector3.Distance(target.position, transform.position);
+            if (distanceToTarget > range) return false;
+            float angleToTarget = Vector3.Angle(transform.forward, (target.position - transform.position));
+            if (angleToTarget > angle/2) return false;
+            Vector3 direction = target.position - transform.position;
+            if (Physics.Raycast(transform.position, direction, distanceToTarget, enemyLayer)) return true;
+        }
         return false;
     }
     
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         if (IsInSight(target)) Gizmos.color = Color.green;
         else Gizmos.color = Color.red;
@@ -56,5 +60,5 @@ public class LineOfSight : MonoBehaviour
         Gizmos.DrawRay(transform.position, Quaternion.Euler(0, -angle/2, 0) * transform.forward * range);
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized* range);
-    }
+    }*/
 }
