@@ -23,16 +23,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
         _rb.MovePosition(_rb.position + forwardMovement);
         
-        //GroundChecking
-        _isGrounded = false;
-        Collider[] colliders = Physics.OverlapSphere(groundChecker.position, .2f, environmentMask);
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            if (colliders[i].gameObject != gameObject)
-            {
-                _isGrounded = true;
-            }
-        }
+        GroundChecker();
     }
 
     private void Update()
@@ -54,6 +45,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Check if is on the ground
+    void GroundChecker()
+    {
+        _isGrounded = false;
+        Collider[] colliders = Physics.OverlapSphere(groundChecker.position, .2f, environmentMask);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                _isGrounded = true;
+            }
+        }
+    }
+
+    //Check if is near to the wall
     void CheckingWalls()
     {
         var rightRay = new Ray(transform.position,transform.right);
