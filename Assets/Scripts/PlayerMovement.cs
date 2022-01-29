@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -6,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     public bool canMoveRight;
     public bool canMoveLeft;
-    public LayerMask rayMask;
+    public LayerMask environmentMask;
+    public Transform groundChecker;
+    private bool _isGrounded;
+    public float jumpForce;
 
     private void Start()
     {
@@ -17,24 +21,22 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
         _rb.MovePosition(_rb.position + forwardMovement);
+
+        _isGrounded = false;
+        Collider[] colliders = Physics.OverlapSphere(groundChecker.position, .2f, environmentMask);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject)
+            {
+                _isGrounded = true;
+            }
+        }
     }
 
     private void Update()
     {
         
-        var rightRay = new Ray(transform.position,transform.right);
-        var leftRay = new Ray(transform.position,-transform.right);
-        RaycastHit hit;
-        if (Physics.Raycast(rightRay, out hit, 3, rayMask))
-        {
-            canMoveRight = false;
-        }
-        else canMoveRight = true;
-
-        if ( Physics.Raycast(leftRay, out hit, 3, rayMask))
-        {
-            canMoveLeft = false;
-        }else canMoveLeft = true;
+        CheckingWalls();
 
         if (Input.GetKeyDown(KeyCode.A) && canMoveLeft)
         {
@@ -43,6 +45,43 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += Vector3.right*2;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
     }
 
+    void CheckingWalls()
+    {
+        var rightRay = new Ray(transform.position,transform.right);
+        var leftRay = new Ray(transform.position,-transform.right);
+        RaycastHit hit;
+        if (Physics.Raycast(rightRay, out hit, 3, environmentMask))
+        {
+            canMoveRight = false;
+        }
+        else canMoveRight = true;
+
+        if ( Physics.Raycast(leftRay, out hit, 3, environmentMask))
+        {
+            canMoveLeft = false;
+        }else canMoveLeft = true;
+    }
+
+    void Jump()
+    {
+        if (_isGrounded)
+        {
+            _isGrounded = false;
+            _rb.AddForce(new Vector2(0f,jumpForce));
+            StartCoroutine(WaitFunc(1));
+        }
+    }
+
+
+    IEnumerator WaitFunc(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
 }
