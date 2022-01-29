@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 1996839647424092799}
   - component: {fileID: 1996839647424092796}
   - component: {fileID: 1996839647424092797}
+  - component: {fileID: 1073205004}
+  - component: {fileID: 1073205005}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fcc3e8f9c967b4bb63ef60e5038503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 44.39
   canMoveRight: 0
   canMoveLeft: 0
   environmentMask:
@@ -88,6 +90,7 @@ MonoBehaviour:
     m_Bits: 64
   groundChecker: {fileID: 1996839647319393903}
   jumpForce: 400
+  isAttacking: 0
 --- !u!33 &1996839647424092798
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -168,3 +171,41 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1073205004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996839647424092786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01ff04a3b18aef4bab99e5cf8eea842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lifeCount: 5
+  counterToDie: 0
+--- !u!114 &1073205005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996839647424092786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40546c22799c9244a8efdb0a885e116d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  angle: 21
+  target: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256

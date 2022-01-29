@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundChecker;
     private bool _isGrounded;
     public float jumpForce;
+    public bool isAttacking;
 
     private void Start()
     {
@@ -20,8 +21,11 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Forward Movement
-        Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
-        _rb.MovePosition(_rb.position + forwardMovement);
+        if (!isAttacking)
+        {
+            Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
+            _rb.MovePosition(_rb.position + forwardMovement);
+        }
         
         GroundChecker();
     }

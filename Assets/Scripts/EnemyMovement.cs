@@ -5,6 +5,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody _rb;
     public float speed;
+    public bool isBeingAttacked;
 
     void Start()
     {
@@ -13,7 +14,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
-        _rb.MovePosition(_rb.position + forwardMovement);
+        if (!isBeingAttacked)
+        {
+            Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
+            _rb.MovePosition(_rb.position + forwardMovement);
+        }
     }
 }
