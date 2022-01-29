@@ -19,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Forward Movement
         Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
         _rb.MovePosition(_rb.position + forwardMovement);
-
+        
+        //GroundChecking
         _isGrounded = false;
         Collider[] colliders = Physics.OverlapSphere(groundChecker.position, .2f, environmentMask);
         for (int i = 0; i < colliders.Length; i++)
