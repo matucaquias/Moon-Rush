@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3;
+    public float humanSpeed;
+    public float wolfSpeed;
     private Rigidbody _rb;
     public bool canMoveRight;
     public bool canMoveLeft;
@@ -12,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _isGrounded;
     public float jumpForce;
     public bool isAttacking;
-
+    public bool isWolf; // la vamos a usar cuando choca con cosas, para restablecer luego los stats.
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -95,5 +97,23 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator WaitFunc(float seconds)
     {
         yield return new WaitForSeconds(seconds);
+    }
+
+    public void SlowsDown()
+    {
+        StartCoroutine(SlowDown(1));
+    }
+    IEnumerator SlowDown(float seconds)
+    {
+        speed = speed - 1.5f;
+        yield return new WaitForSeconds(seconds);
+        if (isWolf)
+        {
+            speed = wolfSpeed;
+        }
+        else
+        {
+            speed = humanSpeed;
+        }
     }
 }

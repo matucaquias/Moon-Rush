@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject moon;
     public float transformationCounter; //tiempo que demora la transformacion.
-    public bool isWolf; // la vamos a usar cuando choca con cosas, para restablecer luego los stats.
     public bool canTransform;  // con esta variable se accede al comienzo de la transformacion.
     // Start is called before the first frame update
     
@@ -25,9 +24,9 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if(transformationCounter >= 1)
+            if(transformationCounter >= 0.1f)
             {
-                isWolf = true;
+                player.GetComponent<PlayerMovement>().isWolf = true;
                 Transformation();
                 transformationCounter = 0;
                 canTransform = false;
@@ -38,9 +37,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("entra");
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if (transformationCounter >= 1)
+            if (transformationCounter >= 0.1f)
             {
-                isWolf = false;
+                player.GetComponent<PlayerMovement>().isWolf = false;
                 Transformation();
                 transformationCounter = 0;
                 canTransform = false;
@@ -51,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void Transformation()
     {
-        if (isWolf)  // modo lobo
+        if (player.GetComponent<PlayerMovement>().isWolf)  // modo lobo
         {
             player.GetComponent<PlayerMovement>().speed = 4;
             player.transform.eulerAngles = new Vector3(0, 0, 0);
