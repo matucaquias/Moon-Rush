@@ -729,8 +729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1073204998}
-  speed: 0
-  moon: 0
+  moon: {fileID: 1373086210}
+  transformationCounter: 0
+  isWolf: 0
+  canTransform: 1
 --- !u!4 &779186948
 Transform:
   m_ObjectHideFlags: 0
@@ -1334,6 +1336,8 @@ MonoBehaviour:
     m_Bits: 128
   isClouded: 0
   checkRadius: 34
+  oneTime: 0
+  gm: {fileID: 779186947}
 --- !u!1 &1401374869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5479785717151927640, guid: e90f4cc138572f2438b17e4dc4536e33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.93
+      value: 49.2
       objectReference: {fileID: 0}
     - target: {fileID: 5479785717151927640, guid: e90f4cc138572f2438b17e4dc4536e33, type: 3}
       propertyPath: m_LocalRotation.w

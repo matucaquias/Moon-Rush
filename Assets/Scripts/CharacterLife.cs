@@ -18,11 +18,11 @@ public class CharacterLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F)) // esto es de prueb SACAR AL TERMINAR.
         {
             Damage(2);
         }
-        if(lifeCount <= 0)
+        if(lifeCount <= 0)  //Delay luego de muerte, para agregar animacion o algo
         {
             counterToDie += Time.deltaTime;
             if (counterToDie >= 3)
@@ -31,20 +31,20 @@ public class CharacterLife : MonoBehaviour
             }
         }
     }
-    public void InstantiateHearths()
+    public void InstantiateHearths()  //Activa los corazones al empezar la partida.
     {
         for (int x = 0; x< hearts.Count; x++)
         {
             hearts[x].enabled = true;
         }
     }
-    public void Damage(int dmg)
+    public void Damage(int dmg)   // Recibe el daño del enemigo u objeto del mapa
     {
         lifeCount -= dmg;
        
         for (int x = lifeCount;x < hearts.Count; x++)
         {
-            if(x >= 0)
+            if(x >= 0)  // sin esto buscaria en el -1 de la lista, da error.
             {
                 hearts[x].enabled = false;
                 Debug.Log("WAT" + x);
