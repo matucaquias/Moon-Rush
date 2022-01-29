@@ -14,7 +14,6 @@ public class GroundTile : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerMovement>() != null)
         {
             _groundSpawner.SpawnTile();
-            Destroy(gameObject,2);
         }
     }
 }
