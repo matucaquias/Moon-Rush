@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     public float changeMovementCounter;
     public float timeToMove;
     private PlayerMovement _player;
+    public GameObject enemyMesh;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -21,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*
         changeMovementCounter += Time.fixedDeltaTime;
         if (changeMovementCounter > timeToMove)
         {
@@ -40,16 +42,24 @@ public class EnemyMovement : MonoBehaviour
             {
                 changeMovementCounter = 0;
             }
-        }
+        }*/
         if (!isBeingAttacked)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
             if (_player.isWolf)
             {
-                _rb.MovePosition(_rb.position - forwardMovement);
-            }else _rb.MovePosition(_rb.position+forwardMovement);
+                enemyMesh.transform.eulerAngles = new Vector3(0, 180, 0);
+                _rb.MovePosition(_rb.position + forwardMovement);
+
+            }
+            else
+            {
+                enemyMesh.transform.eulerAngles = new Vector3(0, 0, 0);
+
+                _rb.MovePosition(_rb.position + forwardMovement);
+            }
         }
-    }
+    }/*
     void CheckingWalls(int action)
     {
         var rightRay = new Ray(transform.position, transform.right);
@@ -85,5 +95,5 @@ public class EnemyMovement : MonoBehaviour
            
         }
         
-    }
+    }*/
 }

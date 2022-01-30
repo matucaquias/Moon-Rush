@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isAttacking;
     public bool isWolf; // la vamos a usar cuando choca con cosas, para restablecer luego los stats.
     public Animator psjeAnim;
-
+    public GameManager gm;
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -41,18 +41,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isAttacking)
         {
-            if (Input.GetKeyDown(KeyCode.D) && canMoveLeft)
+            if (!gm.canTransform)
             {
-                transform.position += Vector3.left*2;
-            }if (Input.GetKeyDown(KeyCode.A) && canMoveRight)
-            {
-                transform.position += Vector3.right*2;
-            }
+                if (Input.GetKeyDown(KeyCode.D) && canMoveLeft)
+                {
+                    transform.position += Vector3.left * 2;
+                }
+                if (Input.GetKeyDown(KeyCode.A) && canMoveRight)
+                {
+                    transform.position += Vector3.right * 2;
+                }
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Jump();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Jump();
+                }
             }
+            
         }
     }
 

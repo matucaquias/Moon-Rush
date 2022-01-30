@@ -22,6 +22,7 @@ public class LineOfSight : MonoBehaviour
         if (Physics.Raycast(Ray, out hit, 150, enemyLayer))
         {
             target = hit.transform.GetComponent<Transform>();
+            Debug.Log("enemy se acerca");
         }
         if (IsInSight(target))
         {
