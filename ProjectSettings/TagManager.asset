@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CloudPivot
   - Trap
+  - Enemy
   layers:
   - Default
   - TransparentFX

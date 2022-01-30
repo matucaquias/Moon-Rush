@@ -39,12 +39,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MoonChecker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GroundTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GroundSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RotateEnemies.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LineOfSight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -101,6 +101,7 @@
       <workItem from="1643517412474" duration="1949000" />
       <workItem from="1643555916349" duration="6192000" />
       <workItem from="1643566035115" duration="1723000" />
+      <workItem from="1643572278090" duration="392000" />
     </task>
     <servers />
   </component>
