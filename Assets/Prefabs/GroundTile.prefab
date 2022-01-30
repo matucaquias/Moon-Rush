@@ -157,7 +157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 00205642e21c20349bdc098e27fcf4d2, type: 2}
+  - {fileID: 2100000, guid: 1ab7621949dfe1a42acd06b2fed1d59c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,8 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f725a7963940f44b944eb660986ac6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle1: {fileID: 8533096149388003724, guid: 6ee16498e8a0f6243828b73d409f4bca, type: 3}
-  obstacle2: {fileID: 3769141968585077879, guid: cda5b67520727bd4f971f9435b7d4b9e, type: 3}
 --- !u!1 &5753055316205042225
 GameObject:
   m_ObjectHideFlags: 0

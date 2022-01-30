@@ -11,7 +11,7 @@ public class Buttons : MonoBehaviour
     // Start is called before the first frame update
     public void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameWorking");
     }
     public void ExitGame()
     {

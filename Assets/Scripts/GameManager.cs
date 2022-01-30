@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour
     {
         if (!moon.GetComponent<MoonChecker>().isClouded && canTransform)
         {
-            player.GetComponent<PlayerMovement>().psjeAnim.SetBool("Transform", true);
+            player.GetComponent<PlayerMovement>().psjeAnim.SetTrigger("Transform");
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if(transformationCounter >= 1f)
+            if(transformationCounter >= 2f)
             {
                 player.GetComponent<PlayerMovement>().isWolf = true;
                 Transformation();
@@ -45,10 +45,12 @@ public class GameManager : MonoBehaviour
         }
         else if (moon.GetComponent<MoonChecker>().isClouded && canTransform)
         {
-//            Debug.Log("entra");
+            //            Debug.Log("entra");
+            player.GetComponent<PlayerMovement>().wolfAnim.SetTrigger("Transform");
+
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if (transformationCounter >= 1f)
+            if (transformationCounter >= 2f)
             {
                 player.GetComponent<PlayerMovement>().isWolf = false;
                 Transformation();
@@ -67,14 +69,19 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().speed = -0.04f;
             playerMesh.transform.eulerAngles = new Vector3(0, 180, 0);
+            player.GetComponent<PlayerMovement>().psjeAnim.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement>().wolfAnim.gameObject.SetActive(true);
+
             //StartCoroutine(WaitFunc(3));
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
-            player.GetComponent<PlayerMovement>().psjeAnim.SetBool("Transform", false);
         }
         else  // modo humano
         {
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
             player.GetComponent<PlayerMovement>().speed = 0.02f;
+            player.GetComponent<PlayerMovement>().wolfAnim.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement>().psjeAnim.gameObject.SetActive(true);
+
             playerMesh.transform.eulerAngles = new Vector3(0, 0, 0);  
         }
     }

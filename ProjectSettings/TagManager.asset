@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CloudPivot
   - Trap
+  - Bullet
   layers:
   - Default
   - TransparentFX

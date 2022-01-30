@@ -10,6 +10,7 @@ public class Proyectile : MonoBehaviour
     private Rigidbody rb;
     public float speed;
     public bool isTridente;
+    public int dmg;
     // Start is called before the first frame update
     void Start()
     {

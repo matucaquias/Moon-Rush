@@ -10,6 +10,7 @@ public class CharacterLife : MonoBehaviour
     public int lifeCount;
     public float counterToDie;
     public Animator psjeAnim;
+    public Animator wolfAnim;
 
     public AudioSource audioSource;
     public AudioClip hurt;
@@ -31,10 +32,13 @@ public class CharacterLife : MonoBehaviour
         }
         if(lifeCount <= 0)  //Delay luego de muerte, para agregar animacion o algo
         {
+           
             if (lifeCount == 0)
             {
+              
                 lifeCount -= 1;
-                psjeAnim.SetTrigger("Die");
+                
+
             }
             counterToDie += Time.deltaTime;            
             if (counterToDie >= 3)
@@ -55,7 +59,11 @@ public class CharacterLife : MonoBehaviour
         lifeCount -= dmg;
         this.GetComponent<PlayerMovement>().SlowsDown();
         audioSource.PlayOneShot(hurt);
-        
+        if(lifeCount <= 0)
+        {
+            psjeAnim.SetTrigger("Die");
+            wolfAnim.SetTrigger("Die");
+        }
         for (int x = lifeCount;x < hearts.Count; x++)
         {
             if(x >= 0)  // sin esto buscaria en el -1 de la lista, da error.
@@ -75,6 +83,11 @@ public class CharacterLife : MonoBehaviour
             Debug.Log("trigg");
 
             Damage(other.GetComponent<Traps>().dmg);
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag == "Bullet")
+        {
+            Damage(other.GetComponent<Proyectile>().dmg);
             Destroy(other.gameObject);
         }
     }
