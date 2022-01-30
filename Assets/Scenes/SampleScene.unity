@@ -1517,6 +1517,8 @@ MonoBehaviour:
   moon: {fileID: 1996839645863781591}
   transformationCounter: 0
   canTransform: 1
+  snapshotHombre: {fileID: 24500006, guid: df114abaddd4cb748a96f98d7e765600, type: 2}
+  snapshotLobo: {fileID: -3994265293594240736, guid: df114abaddd4cb748a96f98d7e765600, type: 2}
 --- !u!4 &779186948
 Transform:
   m_ObjectHideFlags: 0
@@ -4298,7 +4300,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -4686669217025733584, guid: df114abaddd4cb748a96f98d7e765600, type: 2}
   m_audioClip: {fileID: 8300000, guid: c4ff5aa349ab0e947bbb3f15a379a6ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
