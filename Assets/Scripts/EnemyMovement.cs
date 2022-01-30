@@ -14,10 +14,16 @@ public class EnemyMovement : MonoBehaviour
     public float timeToMove;
     private PlayerMovement _player;
     public GameObject enemyMesh;
+
+    private bool _hasPlayedEatSound = false;
+    public AudioSource audioSource;
+    public AudioClip eat;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _player = FindObjectOfType<PlayerMovement>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -59,6 +65,16 @@ public class EnemyMovement : MonoBehaviour
                 _rb.MovePosition(_rb.position + forwardMovement);
             }
         }
+        else
+        {
+            if (!_hasPlayedEatSound)
+            {
+                audioSource.PlayOneShot(eat);
+                _hasPlayedEatSound = true;
+            }
+        }
+
+
     }/*
     void CheckingWalls(int action)
     {
