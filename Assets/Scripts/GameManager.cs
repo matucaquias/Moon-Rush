@@ -15,6 +15,14 @@ public class GameManager : MonoBehaviour
     public AudioMixerSnapshot snapshotHombre;
     public AudioMixerSnapshot snapshotLobo;
 
+    public AudioSource audioSource;
+    public AudioClip lobo;
+    public AudioClip hombre;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (!moon.GetComponent<MoonChecker>().isClouded && canTransform)
@@ -27,7 +35,8 @@ public class GameManager : MonoBehaviour
                 Transformation();
                 transformationCounter = 0;
                 canTransform = false;
-                snapshotLobo.TransitionTo(0);
+                snapshotLobo.TransitionTo(0.1f);
+                audioSource.PlayOneShot(lobo);
             }
         }
         else if (moon.GetComponent<MoonChecker>().isClouded && canTransform)
@@ -41,7 +50,8 @@ public class GameManager : MonoBehaviour
                 Transformation();
                 transformationCounter = 0;
                 canTransform = false;
-                snapshotHombre.TransitionTo(0);
+                snapshotHombre.TransitionTo(0.1f);
+                audioSource.PlayOneShot(hombre);
             }
         }
         
