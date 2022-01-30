@@ -17,12 +17,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!isBeingAttacked)
         {
-            Vector3 forwardMovement = _player.transform.forward * (speed * Time.fixedDeltaTime);
-            if (!_player.isWolf)
+            Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
+            if (_player.isWolf)
             {
-                _rb.MovePosition(_rb.position + forwardMovement);
-            }
-
+                _rb.MovePosition(_rb.position - forwardMovement);
+            }else _rb.MovePosition(_rb.position+forwardMovement);
         }
     }
 }
