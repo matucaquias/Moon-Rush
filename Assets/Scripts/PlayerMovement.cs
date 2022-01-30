@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         if (!isAttacking)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
-        
             _rb.MovePosition(_rb.position + forwardMovement);
         }
         
@@ -40,10 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isAttacking)
         {
-            if (Input.GetKeyDown(KeyCode.A) && canMoveLeft)
+            if (Input.GetKeyDown(KeyCode.D) && canMoveLeft)
             {
                 transform.position += Vector3.left*2;
-            }if (Input.GetKeyDown(KeyCode.D) && canMoveRight)
+            }if (Input.GetKeyDown(KeyCode.A) && canMoveRight)
             {
                 transform.position += Vector3.right*2;
             }

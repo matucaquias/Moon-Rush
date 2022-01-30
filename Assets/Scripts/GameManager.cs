@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour
     {
         if (player.GetComponent<PlayerMovement>().isWolf)  // modo lobo
         {
-            player.GetComponent<PlayerMovement>().speed = 4;
-            player.transform.eulerAngles = new Vector3(0, 0, 0);
+            player.GetComponent<PlayerMovement>().speed = -4;
+            //player.transform.eulerAngles = new Vector3(0, 180, 0);
             StartCoroutine(WaitFunc(3));
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
         }
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         {
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
             player.GetComponent<PlayerMovement>().speed = 1;
-            //player.transform.eulerAngles = new Vector3(0, 180, 0);  
+            //player.transform.eulerAngles = new Vector3(0, 0, 0);  
         }
     }
 

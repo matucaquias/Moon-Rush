@@ -12,9 +12,11 @@ public class EnemyMovement : MonoBehaviour
     public bool canMoveLeft;
     public float changeMovementCounter;
     public float timeToMove;
+    private PlayerMovement _player;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _player = FindObjectOfType<PlayerMovement>();
     }
 
     private void FixedUpdate()
@@ -42,7 +44,10 @@ public class EnemyMovement : MonoBehaviour
         if (!isBeingAttacked)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
-            _rb.MovePosition(_rb.position + forwardMovement);
+            if (_player.isWolf)
+            {
+                _rb.MovePosition(_rb.position - forwardMovement);
+            }else _rb.MovePosition(_rb.position+forwardMovement);
         }
     }
     void CheckingWalls(int action)

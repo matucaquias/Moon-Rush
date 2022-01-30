@@ -17,7 +17,7 @@ public class LineOfSight : MonoBehaviour
 
     private void Update()
     {
-        var Ray = new Ray(transform.position, transform.forward);
+        var Ray = new Ray(transform.position, -transform.forward);
         RaycastHit hit;
         if (Physics.Raycast(Ray, out hit, 150, enemyLayer))
         {
@@ -44,7 +44,7 @@ public class LineOfSight : MonoBehaviour
         {
             float distanceToTarget = Vector3.Distance(target.position, transform.position);
             if (distanceToTarget > range) return false;
-            float angleToTarget = Vector3.Angle(transform.forward, (target.position - transform.position));
+            float angleToTarget = Vector3.Angle(-transform.forward, (target.position - transform.position));
             if (angleToTarget > angle/2) return false;
             Vector3 direction = target.position - transform.position;
             if (Physics.Raycast(transform.position, direction, distanceToTarget, enemyLayer)) return true;
@@ -54,11 +54,11 @@ public class LineOfSight : MonoBehaviour
     
     /*private void OnDrawGizmos()
     {
-        if (IsInSight(target)) Gizmos.color = Color.green;
-        else Gizmos.color = Color.red;
+        //if (IsInSight(target)) Gizmos.color = Color.green;
+        //else Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-        Gizmos.DrawRay(transform.position, Quaternion.Euler(0, angle/2, 0) * transform.forward * range);
-        Gizmos.DrawRay(transform.position, Quaternion.Euler(0, -angle/2, 0) * transform.forward * range);
+        Gizmos.DrawRay(transform.position, Quaternion.Euler(0, angle/2, 0) * -transform.forward * range);
+        Gizmos.DrawRay(transform.position, Quaternion.Euler(0, -angle/2, 0) * -transform.forward * range);
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, (target.position - transform.position).normalized* range);
     }*/
