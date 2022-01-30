@@ -38,7 +38,7 @@ public class CharacterLife : MonoBehaviour
             hearts[x].enabled = true;
         }
     }
-    public void Damage(int dmg)   // Recibe el daño del enemigo u objeto del mapa
+    public void Damage(int dmg)   // Recibe el daÃ±o del enemigo u objeto del mapa
     {
         lifeCount -= dmg;
         this.GetComponent<PlayerMovement>().SlowsDown();

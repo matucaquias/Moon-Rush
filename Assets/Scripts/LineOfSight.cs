@@ -31,9 +31,9 @@ public class LineOfSight : MonoBehaviour
 
     IEnumerator Attack()
     {
-        target.GetComponent<EnemyAttack>().anim.SetTrigger("die");
         _playerMovement.isAttacking = true;
         target.GetComponent<EnemyMovement>().isBeingAttacked = true;
+        target.GetComponent<EnemyAttack>().anim.SetTrigger("die");
         Destroy(target.gameObject,2.1f);
         yield return new WaitForSeconds(2);
         _playerMovement.isAttacking = false;
@@ -47,7 +47,7 @@ public class LineOfSight : MonoBehaviour
             float angleToTarget = Vector3.Angle(-transform.forward, (target.position - transform.position));
             if (angleToTarget > angle/2) return false;
             Vector3 direction = target.position - transform.position;
-            if (Physics.Raycast(transform.position, direction, distanceToTarget, enemyLayer)) return true;
+            if (Physics.Raycast(transform.position, direction, distanceToTarget, enemyLayer)) {Debug.Log("toca");return true;}
         }
         return false;
     }

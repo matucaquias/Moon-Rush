@@ -21,6 +21,7 @@
           <e p="MoonChecker.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Proyectile.cs" t="Include" />
+          <e p="RotateEnemies.cs" t="Include" />
           <e p="Traps.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

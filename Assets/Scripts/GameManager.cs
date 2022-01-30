@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         }
         else if (moon.GetComponent<MoonChecker>().isClouded && canTransform)
         {
-            Debug.Log("entra");
+//            Debug.Log("entra");
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
             if (transformationCounter >= 1f)
