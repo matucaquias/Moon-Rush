@@ -28,7 +28,6 @@
     <setting file="file://$PROJECT_DIR$/../../Unity/MedievalWar/Medieval War/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterLife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/SamuraiArena/Assets/Scripts/LifeBar.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RotateEnemies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -101,6 +100,7 @@
       <workItem from="1643504200794" duration="8012000" />
       <workItem from="1643517412474" duration="1949000" />
       <workItem from="1643555916349" duration="6192000" />
+      <workItem from="1643566035115" duration="1723000" />
     </task>
     <servers />
   </component>
