@@ -13,6 +13,7 @@ public class Proyectile : MonoBehaviour
     void Start()
     {
         startpos = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        this.transform.eulerAngles = new Vector3(-180f, 90f, -90f);
         rb = GetComponent<Rigidbody>();
     }
 

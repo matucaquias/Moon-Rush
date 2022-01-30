@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     public GameObject moon;
     public float transformationCounter; //tiempo que demora la transformacion.
     public bool canTransform;  // con esta variable se accede al comienzo de la transformacion.
- 
+    public GameObject playerMesh;
     
     void Update()
     {
         if (!moon.GetComponent<MoonChecker>().isClouded && canTransform)
         {
+            player.GetComponent<PlayerMovement>().psjeAnim.SetBool("Transform", true);
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
             if(transformationCounter >= 1f)
@@ -47,15 +48,16 @@ public class GameManager : MonoBehaviour
         if (player.GetComponent<PlayerMovement>().isWolf)  // modo lobo
         {
             player.GetComponent<PlayerMovement>().speed = -0.04f;
-            //player.transform.eulerAngles = new Vector3(0, 180, 0);
+            playerMesh.transform.eulerAngles = new Vector3(0, 180, 0);
             //StartCoroutine(WaitFunc(3));
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
+            player.GetComponent<PlayerMovement>().psjeAnim.SetBool("Transform", false);
         }
         else  // modo humano
         {
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
             player.GetComponent<PlayerMovement>().speed = 0.02f;
-            //player.transform.eulerAngles = new Vector3(0, 0, 0);  
+            playerMesh.transform.eulerAngles = new Vector3(0, 0, 0);  
         }
     }
     /*

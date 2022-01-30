@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public bool isAttacking;
     public bool isWolf; // la vamos a usar cuando choca con cosas, para restablecer luego los stats.
+    public Animator psjeAnim;
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -90,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isGrounded)
         {
+            psjeAnim.SetTrigger("Jump");
             _isGrounded = false;
             _rb.AddForce(new Vector2(0f,jumpForce));
             StartCoroutine(WaitFunc(1));
@@ -105,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
     public void SlowsDown()
     {
         StartCoroutine(SlowDown(1));
+        psjeAnim.SetTrigger("Trapped");
     }
     IEnumerator SlowDown(float seconds)
     {

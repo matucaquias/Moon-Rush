@@ -32,8 +32,7 @@ public class EnemyAttack : MonoBehaviour
             {
                 anim.SetInteger("type", type);
                 anim.SetTrigger("attack");
-                GameObject bulletInst = Instantiate(proyectile, weaponEnd.position, Quaternion.Euler(proyectile.transform.eulerAngles.x, proyectile.transform.eulerAngles.y, proyectile.transform.eulerAngles.z));
-                bulletInst.transform.forward = transform.forward;
+                
                 counterAttack = 0;
             }
                         
@@ -51,4 +50,9 @@ public class EnemyAttack : MonoBehaviour
 
         counterAttack = 0;
     } 
+    public void Attack()
+    {
+        GameObject bulletInst = Instantiate(proyectile, weaponEnd.position, Quaternion.Euler(proyectile.transform.eulerAngles.x, proyectile.transform.eulerAngles.y, proyectile.transform.eulerAngles.z));
+        bulletInst.transform.forward = transform.forward;
+    }
 }

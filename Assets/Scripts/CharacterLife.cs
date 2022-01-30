@@ -9,6 +9,7 @@ public class CharacterLife : MonoBehaviour
     public List<Image> hearts;
     public int lifeCount;
     public float counterToDie;
+    public Animator psjeAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,11 @@ public class CharacterLife : MonoBehaviour
         }
         if(lifeCount <= 0)  //Delay luego de muerte, para agregar animacion o algo
         {
+            if (lifeCount == 0)
+            {
+                lifeCount -= 1;
+                psjeAnim.SetTrigger("Die");
+            }
             counterToDie += Time.deltaTime;            
             if (counterToDie >= 3)
             {
