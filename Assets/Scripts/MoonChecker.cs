@@ -29,13 +29,11 @@ public class MoonChecker : MonoBehaviour
         }
         if(colliders.Length == 0 && oneTime) //esto lo hice para que solo pueda transformarase una vez, cuadno entra y sale la nube
         {
-            Debug.Log("0");
             gm.canTransform = true;
             oneTime = false;
         }
         if(colliders.Length > 0 && !oneTime)
         {
-            Debug.Log("1");
 
             gm.canTransform = true;
             oneTime = true;

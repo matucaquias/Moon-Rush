@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if(transformationCounter >= 0.1f)
+            if(transformationCounter >= 1f)
             {
                 player.GetComponent<PlayerMovement>().isWolf = true;
                 Transformation();
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("entra");
             player.GetComponent<PlayerMovement>().speed = 0;
             transformationCounter += Time.deltaTime;
-            if (transformationCounter >= 0.1f)
+            if (transformationCounter >= 1f)
             {
                 player.GetComponent<PlayerMovement>().isWolf = false;
                 Transformation();
@@ -46,21 +46,21 @@ public class GameManager : MonoBehaviour
     {
         if (player.GetComponent<PlayerMovement>().isWolf)  // modo lobo
         {
-            player.GetComponent<PlayerMovement>().speed = -4;
+            player.GetComponent<PlayerMovement>().speed = -0.04f;
             //player.transform.eulerAngles = new Vector3(0, 180, 0);
-            StartCoroutine(WaitFunc(3));
+            //StartCoroutine(WaitFunc(3));
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
         }
         else  // modo humano
         {
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
-            player.GetComponent<PlayerMovement>().speed = 1;
+            player.GetComponent<PlayerMovement>().speed = 0.02f;
             //player.transform.eulerAngles = new Vector3(0, 0, 0);  
         }
     }
-
+    /*
     IEnumerator WaitFunc(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-    }
+    }*/
 }

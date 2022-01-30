@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         //Forward Movement
         if (!isAttacking)
         {
-            Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
+            Vector3 forwardMovement = new Vector3(0,0,speed);
             _rb.MovePosition(_rb.position + forwardMovement);
         }
         
@@ -108,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator SlowDown(float seconds)
     {
-        speed = speed - 1.5f;
+        speed = speed - 0.015f;
         yield return new WaitForSeconds(seconds);
         if (isWolf)
         {

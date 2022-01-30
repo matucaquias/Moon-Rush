@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour
 {
-    public Image instructions;
+    public GameObject instructions;
     public bool instructionOpen=false;
     // Start is called before the first frame update
     public void Restart()
@@ -20,7 +20,7 @@ public class Buttons : MonoBehaviour
     public void Instructions()
     {
         instructionOpen = !instructionOpen;
-        instructions.enabled = instructionOpen;
+        instructions.SetActive(instructionOpen);
     }
     
 }
