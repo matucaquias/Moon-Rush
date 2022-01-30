@@ -444,6 +444,7 @@ MonoBehaviour:
   jumpForce: 400
   isAttacking: 0
   isWolf: 0
+  psjeAnim: {fileID: 4666828611127711433}
 --- !u!54 &1486389743303116773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -480,6 +481,9 @@ MonoBehaviour:
   - {fileID: 0}
   lifeCount: 5
   counterToDie: 0
+  psjeAnim: {fileID: 4666828611127711433}
+  audioSource: {fileID: 0}
+  hurt: {fileID: 0}
 --- !u!114 &1087202101090259605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +976,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7709877238153291832, guid: 57e3901f5e78f8b48941786b0e362615, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bfd0be6dac1a864195df1e349c0e8b6, type: 2}
     - target: {fileID: 919132149155446097, guid: 57e3901f5e78f8b48941786b0e362615, type: 3}
       propertyPath: m_Name
       value: PJ_Transformation

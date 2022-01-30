@@ -1296,14 +1296,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+--- !u!1 &7181935606282956080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288315775291489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557194988946847626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288315775291489}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7181935606282956080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+--- !u!4 &2184083222066190023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288315775291489}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288316430126880
@@ -1370,7 +1375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 6729789198057874214, guid: 1c1b6c64c79a1d14580594127b6a81ac, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 2184083222066190023}
   counterAttack: 0
   attackTime: 4
   force: 500
@@ -2053,14 +2058,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
---- !u!4 &2184083222194912328 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
-  m_PrefabInstance: {fileID: 8028288315935472366}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557194988828613893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288315935472366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2184083222194912328 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288315935472366}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7181935606443640767 stripped
@@ -2815,14 +2820,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
---- !u!4 &7557194988580734036 stripped
+--- !u!4 &2184083222367511833 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316141659071}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7181935606514573038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288316141659071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7557194988580734036 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316141659071}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288317574981755
@@ -2913,7 +2923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 6729789198057874214, guid: 1c1b6c64c79a1d14580594127b6a81ac, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 2184083222367511833}
   counterAttack: 0
   attackTime: 4
   force: 500
@@ -3577,14 +3587,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316205942669}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7557194988558393446 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
-  m_PrefabInstance: {fileID: 8028288316205942669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2184083222463119659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288316205942669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7557194988558393446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316205942669}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288317247927426
@@ -3651,7 +3661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 7878085487265131732, guid: 674f65380cdb7bf45bc0da7ef5afa425, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 3286687339219949810}
   counterAttack: 0
   attackTime: 4
   force: 500
@@ -4334,9 +4344,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
---- !u!4 &2184083222494316701 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+--- !u!1 &7181935606677042026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316304248379}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557194988451703248 stripped
@@ -4344,9 +4354,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316304248379}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7181935606677042026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+--- !u!4 &2184083222494316701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316304248379}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288316746953032
@@ -5106,6 +5116,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288316776344387}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2184083221892738533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288316776344387}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288316184821599
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5194,7 +5209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 6729789198057874214, guid: 1c1b6c64c79a1d14580594127b6a81ac, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 2184083221892738533}
   counterAttack: 0
   attackTime: 4
   force: 500
@@ -5858,14 +5873,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317312945888}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2184083221355595846 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
-  m_PrefabInstance: {fileID: 8028288317312945888}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7181935605672473521 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288317312945888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2184083221355595846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317312945888}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288316204030410
@@ -6620,14 +6635,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317842593564}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7181935605127850573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
-  m_PrefabInstance: {fileID: 8028288317842593564}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557194986921423095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288317842593564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7181935605127850573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317842593564}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288317413139732
@@ -6694,7 +6709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 7878085487265131732, guid: 674f65380cdb7bf45bc0da7ef5afa425, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 4207072758091507358}
   counterAttack: 0
   attackTime: 4
   force: 500
@@ -7382,14 +7397,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317853984902}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2184083220923624992 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
-  m_PrefabInstance: {fileID: 8028288317853984902}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7557194986868412269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
+  m_PrefabInstance: {fileID: 8028288317853984902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2184083220923624992 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1070350730909333850, guid: 37662b1a5b593f94d945b0aacd2286d9, type: 3}
   m_PrefabInstance: {fileID: 8028288317853984902}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &8028288317539539565
@@ -7456,7 +7471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 7878085487265131732, guid: 674f65380cdb7bf45bc0da7ef5afa425, type: 3}
   canAttack: 0
-  weaponEnd: {fileID: 0}
+  weaponEnd: {fileID: 9136055164335913361}
   counterAttack: 0
   attackTime: 4
   force: 500

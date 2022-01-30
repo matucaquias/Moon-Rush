@@ -673,6 +673,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3492373771877911057, guid: e04ff5eb210f8974b870a5844ba47232, type: 3}
   m_PrefabInstance: {fileID: 967477153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &343111544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486389743615657048, guid: 32286df7621bbb04983ffa4b3d4abb26, type: 3}
+  m_PrefabInstance: {fileID: 1486389742937037645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &365214982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3492373771877911057, guid: e04ff5eb210f8974b870a5844ba47232, type: 3}
@@ -1338,6 +1343,7 @@ MonoBehaviour:
   moon: {fileID: 1996839645863781591}
   transformationCounter: 0
   canTransform: 1
+  playerMesh: {fileID: 343111544}
   snapshotHombre: {fileID: 24500006, guid: df114abaddd4cb748a96f98d7e765600, type: 2}
   snapshotLobo: {fileID: -3994265293594240736, guid: df114abaddd4cb748a96f98d7e765600, type: 2}
   audioSource: {fileID: 779186949}
