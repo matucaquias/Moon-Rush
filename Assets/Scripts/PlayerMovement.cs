@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isAttacking;
     public bool isWolf; // la vamos a usar cuando choca con cosas, para restablecer luego los stats.
     public Animator psjeAnim;
+    public Animator wolfAnim;
     public GameManager gm;
     private void Start()
     {
@@ -98,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
         if (_isGrounded)
         {
             psjeAnim.SetTrigger("Jump");
+            wolfAnim.SetTrigger("Jump");
+
             _isGrounded = false;
             _rb.AddForce(new Vector2(0f,jumpForce));
             StartCoroutine(WaitFunc(1));

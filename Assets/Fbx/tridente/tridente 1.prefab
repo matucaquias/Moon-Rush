@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8264405226509744761}
   m_Layer: 9
   m_Name: tridente 1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,6 +81,7 @@ MonoBehaviour:
   calculate: 0
   speed: 30
   isTridente: 0
+  dmg: 3
 --- !u!1001 &6632031125388630120
 PrefabInstance:
   m_ObjectHideFlags: 0

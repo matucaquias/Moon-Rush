@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2199533140605690543}
   m_Layer: 9
   m_Name: proyectile
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6729789198057874214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1850384, y: 9.059105, z: 4.1663365}
-  m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
+  m_LocalScale: {x: 0.19003952, y: 0.19003952, z: 0.19003952}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,3 +131,5 @@ MonoBehaviour:
   startpos: {x: 0, y: 0, z: 0}
   calculate: 0
   speed: 30
+  isTridente: 0
+  dmg: 5
