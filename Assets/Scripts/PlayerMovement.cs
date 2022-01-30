@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isAttacking)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
+        
             _rb.MovePosition(_rb.position + forwardMovement);
         }
         
@@ -37,17 +38,20 @@ public class PlayerMovement : MonoBehaviour
         
         CheckingWalls();
 
-        if (Input.GetKeyDown(KeyCode.A) && canMoveLeft)
+        if (!isAttacking)
         {
-            transform.position += Vector3.left*2;
-        }if (Input.GetKeyDown(KeyCode.D) && canMoveRight)
-        {
-            transform.position += Vector3.right*2;
-        }
+            if (Input.GetKeyDown(KeyCode.A) && canMoveLeft)
+            {
+                transform.position += Vector3.left*2;
+            }if (Input.GetKeyDown(KeyCode.D) && canMoveRight)
+            {
+                transform.position += Vector3.right*2;
+            }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
         }
     }
 

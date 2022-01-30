@@ -10,14 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject moon;
     public float transformationCounter; //tiempo que demora la transformacion.
     public bool canTransform;  // con esta variable se accede al comienzo de la transformacion.
-    // Start is called before the first frame update
+ 
     
-    void Start()
-    {
-      
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (!moon.GetComponent<MoonChecker>().isClouded && canTransform)
@@ -54,12 +48,19 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().speed = 4;
             player.transform.eulerAngles = new Vector3(0, 0, 0);
+            StartCoroutine(WaitFunc(3));
+            //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
         }
         else  // modo humano
         {
+            //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
             player.GetComponent<PlayerMovement>().speed = 1;
-            //player.transform.eulerAngles = new Vector3(0, 180, 0);  Agregar luego de tener el mapa procedural bien
+            //player.transform.eulerAngles = new Vector3(0, 180, 0);  
         }
     }
-    
+
+    IEnumerator WaitFunc(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+    }
 }
