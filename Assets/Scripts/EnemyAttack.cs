@@ -15,10 +15,12 @@ public class EnemyAttack : MonoBehaviour
     public LayerMask enemyMask;
     public int type;
     public Animator anim;
+    public GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackTime = Random.Range(3, 10);
+
     }
 
     // Update is called once per frame
@@ -28,12 +30,13 @@ public class EnemyAttack : MonoBehaviour
         if (counterAttack >= attackTime)
         {
             CheckEnemyInFront();
-            if (canAttack)
+            if (canAttack && !gm.canTransform)
             {
                 anim.SetInteger("type", type);
                 anim.SetTrigger("attack");
                 
                 counterAttack = 0;
+                attackTime = Random.Range(3, 10);
             }
                         
         }

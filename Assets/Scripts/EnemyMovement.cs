@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     private bool _hasPlayedEatSound = false;
     public AudioSource audioSource;
     public AudioClip eat;
+    public GameManager gm;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
                 changeMovementCounter = 0;
             }
         }*/
-        if (!isBeingAttacked)
+        if (!isBeingAttacked && !gm.canTransform)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
             if (_player.isWolf)

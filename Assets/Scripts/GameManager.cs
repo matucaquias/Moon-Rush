@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     {
         if (player.GetComponent<PlayerMovement>().isWolf)  // modo lobo
         {
-            player.GetComponent<PlayerMovement>().speed = -0.04f;
+            player.GetComponent<PlayerMovement>().speed = player.GetComponent<PlayerMovement>().wolfSpeed;
             playerMesh.transform.eulerAngles = new Vector3(0, 180, 0);
             player.GetComponent<PlayerMovement>().psjeAnim.gameObject.SetActive(false);
             player.GetComponent<PlayerMovement>().wolfAnim.gameObject.SetActive(true);
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         else  // modo humano
         {
             //FindObjectOfType<CameraFollow>().SwitchCameraPosition();
-            player.GetComponent<PlayerMovement>().speed = 0.02f;
+            player.GetComponent<PlayerMovement>().speed = player.GetComponent<PlayerMovement>().humanSpeed;
             player.GetComponent<PlayerMovement>().wolfAnim.gameObject.SetActive(false);
             player.GetComponent<PlayerMovement>().psjeAnim.gameObject.SetActive(true);
 

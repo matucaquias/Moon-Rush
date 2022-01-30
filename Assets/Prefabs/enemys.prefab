@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -1503,6 +1503,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606282956080}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!1001 &8028288315935472366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2229,7 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -2242,6 +2244,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606443640767}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!114 &8028288317431393123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,7 +2996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -3005,6 +3009,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606514573038}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!114 &8028288317574981759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,7 +3785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -3792,6 +3798,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606712433372}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!1001 &8028288316304248379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4542,7 +4550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -4555,6 +4563,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606677042026}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!1001 &8028288316776344387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5281,7 +5291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -5294,6 +5304,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935606209074706}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!114 &8028288316184821587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6068,7 +6080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -6081,6 +6093,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935605672473521}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!1001 &8028288317842593564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6831,7 +6845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -6844,6 +6858,8 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935605127850573}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}
 --- !u!1001 &8028288317853984902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7594,7 +7610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abdc32278e7e7e443b40f64d5480dc2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 6
   isBeingAttacked: 0
   environmentMask:
     serializedVersion: 2
@@ -7607,3 +7623,5 @@ MonoBehaviour:
   changeMovementCounter: 0
   timeToMove: 1
   enemyMesh: {fileID: 7181935605005669847}
+  audioSource: {fileID: 0}
+  eat: {fileID: 0}

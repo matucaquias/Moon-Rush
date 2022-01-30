@@ -664,8 +664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 44.39
-  humanSpeed: 0.01
-  wolfSpeed: -0.04
+  humanSpeed: 0.12
+  wolfSpeed: -0.18
   canMoveRight: 0
   canMoveLeft: 0
   environmentMask:

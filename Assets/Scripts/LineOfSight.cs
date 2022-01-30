@@ -36,8 +36,8 @@ public class LineOfSight : MonoBehaviour
         _playerMovement.isAttacking = true;
         target.GetComponent<EnemyMovement>().isBeingAttacked = true;
         target.GetComponent<EnemyAttack>().anim.SetTrigger("die");
-        Destroy(target.gameObject,2.1f);
-        yield return new WaitForSeconds(2);
+        Destroy(target.gameObject,3.7f);
+        yield return new WaitForSeconds(3.6f);
         _playerMovement.isAttacking = false;
         _playerMovement.wolfAnim.SetBool("Attacking", false);
 

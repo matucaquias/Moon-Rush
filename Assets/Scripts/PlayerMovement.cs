@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator SlowDown(float seconds)
     {
-        speed = speed - 0.015f;
+        speed = speed - 0.03f;
         yield return new WaitForSeconds(seconds);
         if (isWolf)
         {

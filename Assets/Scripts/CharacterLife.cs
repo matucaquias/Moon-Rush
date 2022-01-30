@@ -14,7 +14,7 @@ public class CharacterLife : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip hurt;
-
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
@@ -55,24 +55,28 @@ public class CharacterLife : MonoBehaviour
     }
     public void Damage(int dmg)   // Recibe el daño del enemigo u objeto del mapa
     {
-        lifeCount -= dmg;
-        this.GetComponent<PlayerMovement>().SlowsDown();
-        audioSource.PlayOneShot(hurt);
-        if(lifeCount <= 0)
+        if (!gm.canTransform)
         {
-            psjeAnim.SetTrigger("Die");
-            wolfAnim.SetTrigger("Die");
-        }
-        for (int x = lifeCount;x < hearts.Count; x++)
-        {
-            if(x >= 0)  // sin esto buscaria en el -1 de la lista, da error.
+            lifeCount -= dmg;
+            this.GetComponent<PlayerMovement>().SlowsDown();
+            audioSource.PlayOneShot(hurt);
+            if (lifeCount <= 0)
             {
-                hearts[x].enabled = false;
-                Debug.Log("WAT" + x);
+                psjeAnim.SetTrigger("Die");
+                wolfAnim.SetTrigger("Die");
+            }
+            for (int x = lifeCount; x < hearts.Count; x++)
+            {
+                if (x >= 0)  // sin esto buscaria en el -1 de la lista, da error.
+                {
+                    hearts[x].enabled = false;
+                    Debug.Log("WAT" + x);
+
+                }
 
             }
-            
         }
+        
 
     }
     public void OnTriggerEnter(Collider other)
