@@ -14,7 +14,7 @@ public class Clouds : MonoBehaviour
     }
     void Update()
     {
-        transform.RotateAround(pivot.transform.position,new Vector3(0,1,0),rotationSpeed * Time.deltaTime);
+        transform.RotateAround(pivot.transform.position,Vector3.up, rotationSpeed * Time.deltaTime);
         transform.LookAt(pivot.transform);
     }
 }

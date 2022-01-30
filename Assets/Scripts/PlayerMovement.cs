@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         if (!isAttacking)
         {
             Vector3 forwardMovement = transform.forward * (speed * Time.fixedDeltaTime);
-        
             _rb.MovePosition(_rb.position + forwardMovement);
         }
         

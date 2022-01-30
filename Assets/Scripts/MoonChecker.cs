@@ -42,4 +42,9 @@ public class MoonChecker : MonoBehaviour
         }
         
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position,checkRadius);
+    }
 }

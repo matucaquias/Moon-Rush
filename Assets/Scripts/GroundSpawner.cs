@@ -18,4 +18,5 @@ public class GroundSpawner : MonoBehaviour
         GameObject temp = Instantiate(groundTile, _nextSpawnPoint, Quaternion.identity);
         _nextSpawnPoint = temp.transform.GetChild(1).transform.position;
     }
+
 }
