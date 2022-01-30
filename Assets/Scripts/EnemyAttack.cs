@@ -13,7 +13,8 @@ public class EnemyAttack : MonoBehaviour
 
     public Transform player;
     public LayerMask enemyMask;
-
+    public int type;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,8 @@ public class EnemyAttack : MonoBehaviour
             CheckEnemyInFront();
             if (canAttack)
             {
+                anim.SetInteger("type", type);
+                anim.SetTrigger("attack");
                 GameObject bulletInst = Instantiate(proyectile, weaponEnd.position, Quaternion.Euler(proyectile.transform.eulerAngles.x, proyectile.transform.eulerAngles.y, proyectile.transform.eulerAngles.z));
                 bulletInst.transform.forward = transform.forward;
                 counterAttack = 0;

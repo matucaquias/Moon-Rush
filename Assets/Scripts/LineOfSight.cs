@@ -31,6 +31,7 @@ public class LineOfSight : MonoBehaviour
 
     IEnumerator Attack()
     {
+        target.GetComponent<EnemyAttack>().anim.SetTrigger("die");
         _playerMovement.isAttacking = true;
         target.GetComponent<EnemyMovement>().isBeingAttacked = true;
         Destroy(target.gameObject,2.1f);
