@@ -37,13 +37,12 @@ public class CharacterLife : MonoBehaviour
             {
               
                 lifeCount -= 1;
-                
 
             }
             counterToDie += Time.deltaTime;            
             if (counterToDie >= 3)
             {
-                SceneManager.LoadScene("RestartScene");
+                SceneManager.LoadScene("Lose");
             }
         }
     }

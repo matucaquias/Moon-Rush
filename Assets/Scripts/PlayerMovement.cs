@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator psjeAnim;
     public Animator wolfAnim;
     public GameManager gm;
+    private float timer = 3f;
+    
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -25,8 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        timer -= Time.deltaTime;
+        
         //Forward Movement
-        if (!isAttacking)
+        if (!isAttacking && timer <= 0)
         {
             Vector3 forwardMovement = new Vector3(0,0,speed);
             _rb.MovePosition(_rb.position + forwardMovement);

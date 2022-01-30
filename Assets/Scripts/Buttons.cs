@@ -9,9 +9,9 @@ public class Buttons : MonoBehaviour
     public GameObject instructions;
     public bool instructionOpen=false;
     // Start is called before the first frame update
-    public void Restart()
+    public void LoadScene(string scene)
     {
-        SceneManager.LoadScene("GameWorking");
+        SceneManager.LoadScene(scene);
     }
     public void ExitGame()
     {
