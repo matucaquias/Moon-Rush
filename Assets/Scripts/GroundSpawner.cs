@@ -4,10 +4,10 @@ public class GroundSpawner : MonoBehaviour
 {
     public GameObject groundTile;
     private Vector3 _nextSpawnPoint;
-    
+
     void Start()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 50; i++)
         {
             SpawnTile();
         }

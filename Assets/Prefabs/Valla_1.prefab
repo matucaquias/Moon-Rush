@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1143619244601255746}
   - component: {fileID: 1738220152889064408}
   - component: {fileID: 1738220152889064412}
-  - component: {fileID: 8020355784524661182}
   m_Layer: 0
   m_Name: Valla_1
   m_TagString: Trap
@@ -28,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503656732661745303}
-  m_LocalRotation: {x: -0.5465936, y: 0.44859278, z: 0.44859278, w: 0.5465936}
-  m_LocalPosition: {x: -1.99, y: 0.09474075, z: 17.9}
-  m_LocalScale: {x: 2.453148, y: 15.116846, z: 7.2116523}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 17.9}
+  m_LocalScale: {x: 1.0569189, y: 6.512971, z: 3.107082}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 78.752}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!33 &2898634727106990984
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -112,15 +111,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 1
---- !u!114 &8020355784524661182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503656732661745303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5673784c4f49c4e8b1a7b4836d6383, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

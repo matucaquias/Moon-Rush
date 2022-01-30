@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GroundTile : MonoBehaviour
@@ -16,4 +15,5 @@ public class GroundTile : MonoBehaviour
             _groundSpawner.SpawnTile();
         }
     }
+    
 }

@@ -19,7 +19,7 @@ public class MoonChecker : MonoBehaviour
     {
         isClouded = false;
         Collider[] colliders = Physics.OverlapSphere(transform.position, checkRadius, mask);
-        Debug.Log("colliders" + colliders.Length);
+//        Debug.Log("colliders" + colliders.Length);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)

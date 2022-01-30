@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTile: {fileID: 5120020497425618010, guid: e04ff5eb210f8974b870a5844ba47232, type: 3}
-  flippedGroundTile: {fileID: 5120020497425618010, guid: 12512def3727f3d41af05e21c3ad371c, type: 3}
+  obstacle1: {fileID: 3769141968585077879, guid: cda5b67520727bd4f971f9435b7d4b9e, type: 3}
+  obstacle2: {fileID: 1503656732661745303, guid: d02376216fca9214598ce2544475117a, type: 3}
