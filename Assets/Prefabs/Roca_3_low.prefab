@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3485928566290469823}
   - component: {fileID: 562767548646317082}
   - component: {fileID: 2318137007324178640}
-  m_Layer: 0
+  - component: {fileID: 7988977976472762093}
+  - component: {fileID: 5992176843747344915}
+  m_Layer: 10
   m_Name: Roca_3_low
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7988977976472762093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263590684219476229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf75b112532110f4891c45494ff62913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+--- !u!65 &5992176843747344915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263590684219476229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0046940898, y: 0.0028999215, z: 0.005307044}
+  m_Center: {x: -0.00021715485, y: 0.0014074321, z: 0.00065469614}

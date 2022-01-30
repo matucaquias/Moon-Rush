@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public float transformationCounter; //tiempo que demora la transformacion.
     public bool canTransform;  // con esta variable se accede al comienzo de la transformacion.
     public GameObject playerMesh;
-    
 
+    public int remainingEnemies;
 
     public AudioMixerSnapshot snapshotHombre;
     public AudioMixerSnapshot snapshotLobo;
@@ -21,13 +21,24 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip lobo;
     public AudioClip hombre;
+    
+    
+    
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        
+        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
     void Update()
     {
+        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        if (remainingEnemies == 0)
+        {
+            SceneManager.LoadScene("Win");
+        }
+        
         if (!moon.GetComponent<MoonChecker>().isClouded && canTransform)
         {
             player.GetComponent<PlayerMovement>().psjeAnim.SetTrigger("Transform");
