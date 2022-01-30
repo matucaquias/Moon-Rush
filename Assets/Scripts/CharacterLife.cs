@@ -9,10 +9,16 @@ public class CharacterLife : MonoBehaviour
     public List<Image> hearts;
     public int lifeCount;
     public float counterToDie;
+
+    public AudioSource audioSource;
+    public AudioClip hurt;
+
+
     // Start is called before the first frame update
     void Start()
     {
         InstantiateHearths();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +48,7 @@ public class CharacterLife : MonoBehaviour
     {
         lifeCount -= dmg;
         this.GetComponent<PlayerMovement>().SlowsDown();
+        audioSource.PlayOneShot(hurt);
         
         for (int x = lifeCount;x < hearts.Count; x++)
         {
